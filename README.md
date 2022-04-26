@@ -6,7 +6,7 @@
 O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação *IA376L - Deep Learning aplicado a Síntese de Sinais*, 
 oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> Incluir nome RA e foco de especialização de cada membro do grupo. Os grupos devem ter no máximo três integrantes.
+> Integrantes do grupo.
 > |Nome  | RA | Especialização|
 > |--|--|--|
 > | Lucas Hideki Ueda  | 156368  | Matemático Aplicado/MsC. Eng. Elétrica|
@@ -21,6 +21,7 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > Incluir nessa seção link para vídeo de apresentação da proposta do projeto (máximo 5 minutos).
 
 ## Metodologia Proposta
+> 
 > Para a primeira entrega, a metodologia proposta deve esclarecer:
 > * Qual(is) base(s) de dado(s) o projeto pretende utilizar, justificando a(s) escolha(s) realizadas.
 > * Quais abordagens de modelagem generativa o grupo já enxerga como interessantes de serem estudadas.
