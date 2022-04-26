@@ -10,7 +10,7 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > |Nome  | RA | Especialização|
 > |--|--|--|
 > | Lucas Hideki Ueda  | 156368  | Matemático Aplicado/MsC. Eng. Elétrica|
-> | Leonardo  | xxxx  | Eng. Eletricisita|
+> | Leonardo B. de M. M. Marques  | xxxx  | Eng. Eletricisita|
 
 
 ## Descrição Resumida do Projeto
