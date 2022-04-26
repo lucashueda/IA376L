@@ -34,5 +34,7 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 ## Referências Bibliográficas
 > [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749)
+> 
 > [Groove2Groove: One-Shot Music Style Transfer with Supervision from Synthetic Data](https://hal.archives-ouvertes.fr/hal-02923548/document)
+> 
 > [Text-to-Speech Synthesis Techniques for MIDI-to-Audio Synthesis](https://arxiv.org/pdf/2104.12292.pdf)
