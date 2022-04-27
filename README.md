@@ -41,13 +41,22 @@ Resultados esperados:
 
 Proposta de avaliação
 > Se possível, uma avaliação perceptual, onde ouvintes deverão dizer se o estilo gerado pelo modelo (no timbre do áudio base) condiz com o estilo da referência.
+> 
 > Métricas objetivas:
+> 
 >     - Log-Spectral Distance: RMSE do DB-scale mel-spectrogram.
+>     
 >     - Pitch error: Distância Jaccard entre as curvas de pitch.
+>     
 >     - Timbre error: Dissimilarity score de uma rede treinada nos 1-13 componentes MFCC.
 
-## Cronograma
-> Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
+## Cronograma (a partir de 26/04/2022)
+> - 1ª semana: Finalização da busca bibliográfica (definir conceitos e técnicas da literatura)
+> - 2ª - 4ª semana: Familiarização e implantação baseado em códigos de referência. Definição e preparação da pipeline de experimentos de interesse.
+> - 5ª - 7ª semana: Rodar experimentos de interesse e consolidar resultados parciais, métrica objetivas. Preparação de avaliação subjetiva.
+> - 8ª semana: Avaliação subjetiva e finalização do paper final.
+> - 9ª semana: Finalização e apresentação do trabalho.
+
 
 ## Referências Bibliográficas
 > [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749)
