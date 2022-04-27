@@ -21,7 +21,13 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > Incluir nessa seção link para vídeo de apresentação da proposta do projeto (máximo 5 minutos).
 
 ## Metodologia Proposta
-> 
+>Dados (Todos CC-BY 4.0):
+>- MAESTRO dataset (pronto para download): https://magenta.tensorflow.org/datasets/maestro
+> - 200k MIDI files of piano recordings
+>- Lakh Midi dataset (pronto para download): https://colinraffel.com/projects/lmd/
+> - 170k MIDI files of mixed instruments
+
+
 > Para a primeira entrega, a metodologia proposta deve esclarecer:
 > * Qual(is) base(s) de dado(s) o projeto pretende utilizar, justificando a(s) escolha(s) realizadas.
 > * Quais abordagens de modelagem generativa o grupo já enxerga como interessantes de serem estudadas.
@@ -39,3 +45,5 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > [Groove2Groove: One-Shot Music Style Transfer with Supervision from Synthetic Data](https://hal.archives-ouvertes.fr/hal-02923548/document)
 > 
 > [Text-to-Speech Synthesis Techniques for MIDI-to-Audio Synthesis](https://arxiv.org/pdf/2104.12292.pdf)
+>
+> [Music Style Transfer: A Position Paper](https://arxiv.org/pdf/1803.06841.pdf)
