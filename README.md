@@ -14,10 +14,14 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição Resumida do Projeto
-> Descrição do tema do projeto, incluindo contexto gerador, motivação.
-> Descrição do objetivo principal do projeto.
-> Esclarecer qual será a saída do modelo de síntese, ou generativo.
-> 
+> No domínio de imagem, a transferência de estilos artísticos, no sentido de texturas, já é uma realidade. Por exemplo, é possível transferir o estilo, definido pela forma dos traços e cores de uma pintura de Van Gogh ou Pablo Picasso, para uma imagem qualquer de entrada.
+
+> Já no contexto de música, a propriedade de estilo se refere ao timbre do áudio em questão. Por exemplo, por mais que um saxofone e uma guitarra toquem a mesma nota, emitindo a mesma frequência fundamental, nós conseguimos identificar facilmente de ouvido qual instrumento está tocando, isso se deve ao timbre. O timbre é caracterizado tanto pelo envelope espectral, visualizado através de espectrogramas que diagnosticam a característica sonora completa do instrumento, como também pelo envelope temporal, que corresponde às chamadas características do envelope ADSR. 
+
+> Em particular, modelos generativos necessitam de dados do que se quer gerar, no momento do treinamento. Então, caso quisessemos gerar um timbre musical diferente, seria necessário coletar, processar tais dados e re-treinar todo o modelo. Uma alternativa a isso, é a transferência de estilo one-shot, ou seja, transferir o timbre de um instrumento a partir de uma só amostra, que não necessariamente foi vista durante o treinamento pelo modelo.
+
+> O foco do nosso projeto então será explorar arquiteturas autoencoder, onde o decoder condicionará o processo generativo ao estilo desejado. E no nosso caso o dado de entrada desse processo autoencoder é o espectrograma do sinal musical.
+
 > Incluir nessa seção link para vídeo de apresentação da proposta do projeto (máximo 5 minutos).
 
 ## Metodologia Proposta
