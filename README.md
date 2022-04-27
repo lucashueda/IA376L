@@ -22,7 +22,7 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 > O foco do nosso projeto então será explorar arquiteturas autoencoder, onde o decoder condicionará o processo generativo ao estilo desejado. E no nosso caso o dado de entrada desse processo autoencoder é o espectrograma do sinal musical.
 
-> Incluir nessa seção link para vídeo de apresentação da proposta do projeto (máximo 5 minutos).
+> link para vídeo de apresentação da proposta do projeto: https://drive.google.com/file/d/1t5RGSTJ7VVHPmF33mxPR6wT1vDSGK9XK/view?usp=sharing
 
 ## Metodologia Proposta
 
