@@ -21,20 +21,30 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 > Incluir nessa seção link para vídeo de apresentação da proposta do projeto (máximo 5 minutos).
 
 ## Metodologia Proposta
->Dados (Todos CC-BY 4.0):
+
+Dados disponíveis (Todos CC-BY 4.0):
 >- MAESTRO dataset (pronto para download): https://magenta.tensorflow.org/datasets/maestro
-> - 200k MIDI files of piano recordings
->- Lakh Midi dataset (pronto para download): https://colinraffel.com/projects/lmd/
-> - 170k MIDI files of mixed instruments
+>   - 200k MIDI files of piano recordings
+>- Lakh MIDI dataset (pronto para download): https://colinraffel.com/projects/lmd/
+>   - 170k MIDI files of mixed instruments
 
+Lakh MIDI dataset parece ser o mais relevante para nossa tarefa por já se tratar de diversos instrumentos distintos. 
 
-> Para a primeira entrega, a metodologia proposta deve esclarecer:
-> * Qual(is) base(s) de dado(s) o projeto pretende utilizar, justificando a(s) escolha(s) realizadas.
-> * Quais abordagens de modelagem generativa o grupo já enxerga como interessantes de serem estudadas.
-> * Artigos de referência já identificados e que serão estudados ou usados como parte do planejamento do projeto
-> * Ferramentas a serem utilizadas (com base na visão atual do grupo sobre o projeto).
-> * Resultados esperados
-> * Proposta de avaliação
+Abordagens de modelagem e artigo de referência:
+> Identificamos que algumas técnicas já vistas em aula são utilizadas na literatura, entre elas as VAE's (e variações como o VQ-VAE) e as GAN's. Um trabalho bem em linha com o que queremos realizar é o "Self-Supervised VQ-VAE for One-Shot Music Style Transfer", onde as VQ-VAE's são utilizadas para modelar o estilo musical. Uma possível variação seria utilizar Normalizing Flows para a mesma tarefa.
+
+Ferramentas a serem utilizadas:
+> Em média a literatura reporta cerca de 20h de treinamento utilizando uma GPU V100. Acreditamos portanto que o uso do **colab (P100 ou T4)** e **máquina prória (RTX2060)**, permitirão treinamentos com mais tempo de treinamento. Além disso, utilizaremos o **google drive** para centralizar os scripts de experimentos e todos os arquivos resultantes (revisão bibliográfica, análise de resultados, resultados parciais, etc). O código será versionado e armazenado no **github** e o paper final escrito em LaTeX utiliznado o **overleaf**.
+
+Resultados esperados:
+> Esperamos uma rede generativa capaz de gerar áudios a partir de arquivos MIDI. Em particular, de forma que o estilo de tais áudios possam ser condicionados ao estilo de um arquivo MIDI de referência. Também esperamos entender mais o mecanismo de geração de áudios a partir de metodologias novas em redes generativas, como os Normalizing Flows ou os Denoising Diffusions.
+
+Proposta de avaliação
+> Se possível, uma avaliação perceptual, onde ouvintes deverão dizer se o estilo gerado pelo modelo (no timbre do áudio base) condiz com o estilo da referência.
+> Métricas objetivas:
+>     - Log-Spectral Distance: RMSE do DB-scale mel-spectrogram.
+>     - Pitch error: Distância Jaccard entre as curvas de pitch.
+>     - Timbre error: Dissimilarity score de uma rede treinada nos 1-13 componentes MFCC.
 
 ## Cronograma
 > Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
