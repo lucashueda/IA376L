@@ -87,10 +87,4 @@ No atual estado do presente trabalho o cronograma inicialmente proposto pode ser
 
 ## Referências Bibliográficas
 
- [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749)
- 
- [Groove2Groove: One-Shot Music Style Transfer with Supervision from Synthetic Data](https://hal.archives-ouvertes.fr/hal-02923548/document)
- 
- [Text-to-Speech Synthesis Techniques for MIDI-to-Audio Synthesis](https://arxiv.org/pdf/2104.12292.pdf)
-
- [Music Style Transfer: A Position Paper](https://arxiv.org/pdf/1803.06841.pdf)
+ [Link para nossa tabela detalhada de referências.](https://docs.google.com/spreadsheets/d/1f9BfdOSueFFlQz8008JxTJVskYowop-zIzsyydMJlC8/edit?usp=drivesdk)
