@@ -47,6 +47,9 @@ A metodologia proposta consistiu inicialmente em replicar o trabalho [Self-Super
 
 Com a replicacão do modelo abordado no trabalho para a transferência de timbre musical, baseado em um Autoencoder Variacional Quantizado (VQ-VAE), esse passaria então a servir como baseline, sobre o qual introduziria-se um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre, como por exemplo os Normalizing Flows.
 
+Nesse contexto, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
+
+Como medidas de análise de desempenho, idealizou-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
 
 ## Resultados e Discussão dos Resultados
 
@@ -61,7 +64,7 @@ Com a replicacão do modelo abordado no trabalho para a transferência de timbre
 > O que se espera da sessão de resultados é que ela **apresente e discuta** somente os resultados mais **relevantes**, que mostre os **potenciais e/ou limitações** da metodologia, que destaquem aspectos
 > de **performance** e que contenha conteúdo que possa ser classificado como **compartilhamento organizado, didático e reprodutível de conhecimento relevante para a comunidade**. 
 
-Inicialmente tomamos como base o repositório https://github.com/cifkao/ss-vq-vae utilizando a base pública Lahk MiDi Dataset (LMD). O primeira passo foi processar a base de dados, transformandos os arquivos MIDI em arquivos wav. O primeiro passo consiste em rodar o arquivo prepare.ipynb no diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/note_seq, em seguida, os arquivos wav's são gerados ao rodar o arquivos prepare.ipynb do diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/audio_train. Apesar das instruções de ambiente virtual descritos no repositório, alguns problemas foram encontrados e solucionados:
+O primeira passo foi processar a base de dados, transformandos os arquivos MIDI em arquivos wav. O primeiro passo consiste em rodar o arquivo prepare.ipynb no diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/note_seq, em seguida, os arquivos wav's são gerados ao rodar o arquivos prepare.ipynb do diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/audio_train. Apesar das instruções de ambiente virtual descritos no repositório, alguns problemas foram encontrados e solucionados:
 
 - FluidSynth não tem instalador para windows e nem interface com o pyFluidSynth (Solução: Instalar manualmente e adicionar o bin do FluidSynth no pathing do windows)
 - Também foi necessário instalar o SoX no windows pelo anaconda (Solução: rodar -> conda install -c conda-forge sox)
