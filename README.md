@@ -49,7 +49,7 @@ Com a replicacão do modelo abordado no trabalho para a transferência de timbre
 
 Nesse contexto, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
 
-Como medidas de análise de desempenho, idealizou-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
+Como medidas para analisar o desempenho, idealizou-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
 
 ## Resultados e Discussão dos Resultados
 
