@@ -43,6 +43,11 @@ São objetivos específicos:
 > Apontar ferramentas relevantes.
 > Descrever metodologia de avaliação (como se avalia se os objetivos foram cumpridos ou não?).
 
+A metodologia proposta consistiu inicialmente em replicar o trabalho [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749), publicado no ICASSP 2021. Julgou-se interessante essa abordagem devido ao fato do projeto ser de código aberto, disponibilizado em https://github.com/cifkao/ss-vq-vae; demonstrar bons resultados no artigo bem como na página de demonstrações; e possuir pelo menos um dos dois bancos de dados utilizados para treinamento também aberto. 
+
+Com a replicacão do modelo abordado no trabalho para a transferência de timbre musical, baseado em um Autoencoder Variacional Quantizado (VQ-VAE), esse passaria então a servir como baseline, sobre o qual introduziria-se um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre, como por exemplo os Normalizing Flows.
+
+
 ## Resultados e Discussão dos Resultados
 
 > Na entrega parcial do projeto (E2), essa seção pode conter resultados parciais, explorações de implementações realizadas e 
