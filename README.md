@@ -56,6 +56,16 @@ São objetivos específicos:
 > O que se espera da sessão de resultados é que ela **apresente e discuta** somente os resultados mais **relevantes**, que mostre os **potenciais e/ou limitações** da metodologia, que destaquem aspectos
 > de **performance** e que contenha conteúdo que possa ser classificado como **compartilhamento organizado, didático e reprodutível de conhecimento relevante para a comunidade**. 
 
+Inicialmente tomamos como base o repositório https://github.com/cifkao/ss-vq-vae utilizando a base pública Lahk MiDi Dataset (LMD). O primeira passo foi processar a base de dados, transformandos os arquivos MIDI em arquivos wav. O primeiro passo consiste em rodar o arquivo prepare.ipynb no diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/note_seq, em seguida, os arquivos wav's são gerados ao rodar o arquivos prepare.ipynb do diretório https://github.com/cifkao/ss-vq-vae/tree/main/data/lmd/audio_train. Apesar das instruções de ambiente virtual descritos no repositório, alguns problemas foram encontrados e solucionados:
+
+- FluidSynth não tem instalador para windows e nem interface com o pyFluidSynth (Solução: Instalar manualmente e adicionar o bin do FluidSynth no pathing do windows)
+- Também foi necessário instalar o SoX no windows pelo anaconda (Solução: rodar -> conda install -c conda-forge sox)
+
+Após a adequação do ambiente o primeiro processamento foi iniciado, o processo total demorou cerca de 7 horas de processamento. O segundo processamento por sua vez levou cerca de 48 horas para terminar de rodar, gerando aproximadamente 70gb de audios no formato wav. Apesar de terminar o processamento, dado a grandeza dos dados alguns erros de espaço em disco impossibilitaram avanços na replicação do código. O google Colab não suporta facilmente tamanha quantidade de dados, e armazenar tamanha quantidade de dados no drive também se mostrou uma tarefa complicada. Além disso, na própria máquina local a compactação dos arquivos em um arquivo zip tem apresentado dificuldades, com estimativa de 7 horas de processamento (Imagem 1) e ocorrendo erros nas tentativas de finalizar a compactação.
+
+![image](https://user-images.githubusercontent.com/19509614/170158786-0ce22b6c-a371-4e9d-8b7a-e40425901e63.png)
+Imagem 1: Tempo estimado para compactar base processada.
+
 ## Conclusão
 
 > A sessão de Conclusão deve ser uma sessão que recupera as principais informações já apresentadas no relatório e que aponta para trabalhos futuros.
