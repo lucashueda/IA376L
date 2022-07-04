@@ -27,12 +27,12 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 ## Objetivo
 
-O objetivo do nosso projeto então será explorar arquiteturas autoencoder, onde o decoder condicionará o processo generativo ao estilo desejado. E no nosso caso o dado de entrada desse processo autoencoder é o espectrograma do sinal musical.
+O objetivo do nosso projeto é explorar arquiteturais neurais generativas para realizar a transferência do timbre de referência (estilo) para o conteúdo musical desejado.
 
 São objetivos específicos:
 
-- A síntese controlada do sinal musical de sáida a partir de uma amostra do timbre de referência;
-- Explorar o uso de abordagens generativas, tais como flows ou diffusion models.
+- Avaliar abordagens baseadas em normalizing flows e/ou variational autoencoders (VAEs) para a realização da transferência;
+- Obter uma síntese controlada do sinal musical de sáida a partir do condicionamento do modelo generativo através de uma amostra do timbre de referência;
 
 ## Metodologia Proposta
 
@@ -43,13 +43,17 @@ São objetivos específicos:
 > Apontar ferramentas relevantes.
 > Descrever metodologia de avaliação (como se avalia se os objetivos foram cumpridos ou não?).
 
-A metodologia proposta consistiu inicialmente em replicar o trabalho [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749), publicado no ICASSP 2021. Julgou-se interessante essa abordagem devido ao fato do projeto ser de código aberto, disponibilizado em https://github.com/cifkao/ss-vq-vae; demonstrar bons resultados no artigo bem como na página de demonstrações; e possuir pelo menos um dos dois bancos de dados utilizados para treinamento também aberto. 
+Foi realizada uma replicação do trabalho [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749), publicado no ICASSP 2021. Este trabalho consiste numa abordagem baseada em um Autoencoder Variacional Quantizado (VQ-VAE) para transferência de timbre musical e tornou se então nosso modelo baseline. Julgou-se interessante essa abordagem devido ao fato do projeto ser de código aberto, disponibilizado em https://github.com/cifkao/ss-vq-vae; demonstrar bons resultados no artigo bem como na página de demonstrações; e possuir pelo menos um dos dois bancos de dados utilizados para treinamento também abertos. 
 
-Com a replicacão do modelo abordado no trabalho para a transferência de timbre musical, baseado em um Autoencoder Variacional Quantizado (VQ-VAE), esse passaria então a servir como baseline, sobre o qual introduziria-se um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre, como por exemplo os Normalizing Flows.
+A partir daí, buscou-se introduzir um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre: os [Normalizing Flows](https://proceedings.mlr.press/v37/rezende15.html). Especificamente, nós utilizamos o [Glow] (https://proceedings.neurips.cc/paper/2018/hash/d139db6a236200b21cc7f752979132d0-Abstract.html) como tentativa de melhoria na tarefa de transferência de timbre musical.
 
-Nesse contexto, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
+O Glow consiste em um modelo generativo baseado em normalizing flows que se utiliza de convoluções 1x1, dentre outras camadas para realizar a síntese.
 
-Como medidas para analisar o desempenho, idealizou-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
+Falar sobre glow e como foi condicionado.
+
+Para treinar tanto o modelo basline como o proposto baseado em Glow, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
+
+Como medidas para analisar o desempenho, idealiza-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
 
 ## Resultados e Discussão dos Resultados
 
