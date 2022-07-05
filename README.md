@@ -1,5 +1,5 @@
-# Transferência de timbre na síntese de música
-# Style transfer in music synthesis
+# Transferência de Timbre na Síntese de Música
+# Style transfer in Music Synthesis
 
 ## Apresentação
 
