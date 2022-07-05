@@ -47,8 +47,8 @@ Foi realizada uma replicação do trabalho [Self-Supervised VQ-VAE for One-Shot 
 
 A partir daí, buscou-se introduzir um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre: os [Normalizing Flows](https://proceedings.mlr.press/v37/rezende15.html). Especificamente, nós utilizamos o [Glow](https://proceedings.neurips.cc/paper/2018/hash/d139db6a236200b21cc7f752979132d0-Abstract.html) como tentativa de melhoria na tarefa de transferência de timbre musical. O Glow consiste em um modelo generativo baseado em normalizing flows e é composto pelas seguinters transformaçãoes: Actnorm, 1x1 Invertible Convlutions e uma Affine Coupling Layer. Nosso modelo glow é condicionado com as representações de conteúdo e estilo extraídas com dois encoders a partir de dois mel-espectrogramas de entrada, um contendo o conteúdo musical desejado e outro o timbre do instrumento. O condicionamento se dá através da introdução dessas representações nas camadas de Affine Coupling, através de uma camada Gated Tanh Unit. A arquitetura é mosotrada na figura abaixo.
 
+![image](https://github.com/lucashueda/IA376L/blob/main/Untitled%20Diagram.drawio.png)
 ![image](https://github.com/lucashueda/IA376L/blob/581f8bab39358bc3143bf594beb058a795fa0827/Untitled%20Diagram.drawio%20(1).png)
-![image](https://github.com/lucashueda/IA376L/blob/581f8bab39358bc3143bf594beb058a795fa0827/Untitled%20Diagram.drawio%20.png)
 
 Para treinar tanto o modelo basline como o proposto baseado em Glow, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
 
