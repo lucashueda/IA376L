@@ -36,13 +36,6 @@ São objetivos específicos:
 
 ## Metodologia Proposta
 
-> Descrever de maneira clara e objetiva, citando referências, a metodologia proposta (E2) ou adotada (E3) para se alcançar os objetivos do projeto.
-> Descrever bases de dados utilizadas.
-> Citar algoritmos de referência.
-> Justificar os porquês dos métodos escolhidos.
-> Apontar ferramentas relevantes.
-> Descrever metodologia de avaliação (como se avalia se os objetivos foram cumpridos ou não?).
-
 Foi realizada uma replicação do trabalho [Self-Supervised VQ-VAE for One-Shot Music Style Transfer](https://arxiv.org/abs/2102.05749), publicado no ICASSP 2021. Este trabalho consiste numa abordagem baseada em um Autoencoder Variacional Quantizado (VQ-VAE) para transferência de timbre musical e tornou se então nosso modelo baseline. Julgou-se interessante essa abordagem devido ao fato do projeto ser de código aberto, disponibilizado em https://github.com/cifkao/ss-vq-vae; demonstrar bons resultados no artigo bem como na página de demonstrações; e possuir pelo menos um dos dois bancos de dados utilizados para treinamento também abertos. 
 
 A partir daí, buscou-se introduzir um incremento no desempenho, através da proposta de um outro modelo generativo que apresenta excelentes resultados em outras áreas e ainda não explorado diretamente para a transferência de timbre: os [Normalizing Flows](https://proceedings.mlr.press/v37/rezende15.html). Especificamente, nós utilizamos o [Glow](https://proceedings.neurips.cc/paper/2018/hash/d139db6a236200b21cc7f752979132d0-Abstract.html) como tentativa de melhoria na tarefa de transferência de timbre musical. O Glow consiste em um modelo generativo baseado em normalizing flows e é composto pelas seguinters transformaçãoes: Actnorm, 1x1 Invertible Convlutions e uma Affine Coupling Layer. Nosso modelo glow é condicionado com as representações de conteúdo e estilo extraídas com dois encoders a partir de dois mel-espectrogramas de entrada, um contendo o conteúdo musical desejado e outro o timbre do instrumento. O condicionamento se dá através da introdução dessas representações nas camadas de Affine Coupling, através de uma camada Gated Tanh Unit. A arquitetura é mosotrada na figura abaixo.
@@ -52,7 +45,7 @@ A partir daí, buscou-se introduzir um incremento no desempenho, através da pro
 
 Para treinar tanto o modelo basline como o proposto baseado em Glow, a base de dados utilizada e pré-processada para o treinamento foi a Lahk midi dataset, disponível em https://colinraffel.com/projects/lmd/, em sua versão completa, ou 'full', que contém 178k de arquivos MIDI, o que consiste em aproximadamente um ano de conteúdo musical na forma simbólica. 
 
-Como medidas para analisar o desempenho, idealiza-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
+Após finalização do treinamento, como medidas para analisar o desempenho, idealiza-se a implementação conjunta de: métricas objetivas, a fim de obter resultados preliminares e poder-se comparar dietamente com o modelo baseline VQ-VAE; uma avaliação perceptual, na qual os ouvintes julgariam qual a melhor transferência de conteúdo para o timbre desejado através de um teste AB, também comparando com o baseline; e por último julgar-se-ia a utilização do modelo como ferramenta criativa, intuito para o qual é desenvolvido, através da uso desse por artistas musicais em curtas composições, que evidenciariam um aumento da capacidade criativa de se compor música ao se utilizarem dessa nova ferramenta.
 
 ## Resultados e Discussão dos Resultados
 
