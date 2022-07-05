@@ -49,9 +49,6 @@ Após finalização do treinamento, como medidas para analisar o desempenho, ide
 
 ## Resultados e Discussão dos Resultados
 
-> Na entrega parcial do projeto (E2), essa seção pode conter resultados parciais, explorações de implementações realizadas e 
-> discussões sobre tais experimentos, incluindo decisões de mudança de trajetória ou descrição de novos experimentos, como resultado dessas explorações.
-
 > Na entrega final do projeto (E3), essa seção deve elencar os **principais** resultados obtidos (não necessariamente todos), que melhor representam o cumprimento
 > dos objetivos do projeto.
 
