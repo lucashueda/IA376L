@@ -83,15 +83,7 @@ Exemplos de áudios gerados podem ser escutados em: https://drive.google.com/dri
 > Na entrega parcial do projeto (E2) pode conter informações sobre quais etapas ou como o projeto será conduzido até a sua finalização.
 > Na entrega final do projeto (E3) espera-se que a conclusão elenque, dentre outros aspectos, possibilidades de continuidade do projeto.
 
-No atual estado do presente trabalho o cronograma inicialmente proposto pode ser mantido. Durante a etapa atual de familiarização e implantação de códigos já identificamos gargalos referente a base de dados, onde já estamos a par de novas bases e alternativas para nossa abordagem.
-
-### Cronograma (a partir de 26/04/2022)
-> - 1ª semana: Finalização da busca bibliográfica (definir conceitos e técnicas da literatura)
-> - 2ª - 4ª semana (**etapa atual**): Familiarização e implantação baseado em códigos de referência. Definição e preparação da pipeline de experimentos de interesse.
-> - 5ª - 7ª semana: Rodar experimentos de interesse e consolidar resultados parciais, métrica objetivas. Preparação de avaliação subjetiva.
-> - 8ª semana: Avaliação subjetiva e finalização do paper final.
-> - 9ª semana: Finalização e apresentação do trabalho.
-
+A tarefa de transferência de estilo é um desafio enorme, seja nas bases de dados, na infraestrutura computacional ou mesmo nas arquiteturas propostas. Diferente de uma síntese "straight-forward", nosso objetivo é não só gerar o dado de saída, como também alterar seu estilo. Ao ouvir as amostras geradas, percebemos que o conteúdo foi modelado corretamente (content encoder), no entanto, o estilo/timbre não (style encoder). Timbre nunca vistos no treinamento permaneciam com seu conteúdo intacto, no entanto a síntese se tornava ruidosa, e em nenhum caso foi possível a transferência de timbre. Além disso, as dificuldades encontradas quanto a rodar propriamente a arquitetura, dados as condições computacionais dispostas, tornaram cada experimento muito custoso, onde somente o experimento da VQ-VAE tomou cerca de 30 dias, entre tempo 24h rodando (20 dias) e análise e adequação de códigos e resultados (10 dias). A ideia inicial era averiguar o uso de técnicas mais recentes de modelos generativos, tais como os Normalizing Flows, no contexto do mesmo problema, e o mesmo foi codificado e iniciado o treinamento. No entanto, devido a natureza custosa das experimentações, se tornou inviável o reporte dela no contexto da disciplina, e portanto ele se manterá como continuidade do projeto. As avaliações propostas se enquadram no mesmo aspecto, se tornando também tópico de continuidade do projeto.
 
 ## Referências Bibliográficas
 
