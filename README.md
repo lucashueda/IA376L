@@ -15,7 +15,7 @@ oferecida no primeiro semestre de 2022, na Unicamp, sob supervisão da Profa. Dr
 
 ## Resumo (Abstract)
 
-> Resumo do objetivo, metodologia **e resultados** obtidos. Sugere-se máximo de 100 palavras. 
+A transferência neural de estilo consiste em aplicar o estilo de um dado no conteúdo de outro. Essa tarefa é bastante explorada no contexto de imagens, onde o estilo é definido como as texturas e cores de uma imagem de referência que devem ser passadas para uma imagem alvo. No contexto de música, no qual o estilo é definido como o timbre do instrumento, existem poucas técnicas na literatura que endereçam essa tarefa de sintetizar um dado conteúdo musical com o timbre do instrumento alvo. Sendo assim, esse trabalho propõe uma abordagem baseada em modelos neurais generativos, o Glow, um tipo de Normalizing Flow, condicionado com as representações de estilo e conteúdo através de Gated Tanh Units.
 
 ## Descrição do Problema/Motivação
 
